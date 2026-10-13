@@ -1,0 +1,376 @@
+/*https://mimo.org/glossary/css/media-query For common screen sizes*/
+/* w3schools.com for information on border box box sizing*/
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#menu-button {
+  display: block;
+}
+
+#navbar-button-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: white;
+  border-bottom: #949494 solid 1px;
+  margin-bottom: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: small;
+  font-family: "Noto Sans", sans-serif;
+}
+
+button,
+input[type="submit"] {
+  font-family: "Noto Sans", sans-serif;
+  font-size: small;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  border: none;
+  background-color: #161616;
+  color: white;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #454545;
+}
+
+button:active,
+input[type="submit"]:active {
+  background-color: #55444d;
+}
+
+.button-area {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.post-content {
+  font-family: "Noto Sans", sans-serif;
+  font-size: small;
+}
+
+.author-info {
+  text-align: end;
+  font-size: smaller;
+}
+
+.comment-info {
+  font-size: smaller;
+}
+
+.author-info::before {
+  padding: 0.2rem;
+  content: "\2014";
+}
+
+input {
+    width: 90%;
+}
+
+input:not([type="submit"]) {
+  padding: 0.5rem;
+  font-size: small;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.view-post-link {
+  font-size: small;
+}
+
+#nav-list {
+  background-color: #2f2f2f;
+  text-align: center;
+  list-style-type: none;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#nav-list a {
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 500;
+  color: white;
+}
+
+#nav-list li {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#nav-list li:hover {
+  background-color: palevioletred;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #2f2f2f;
+  height: max-content;
+  color: white;
+  padding: 1.5rem;
+}
+
+footer ul {
+  list-style-type: none;
+  font-size: small;
+}
+
+footer li {
+  padding: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+form {
+  padding: 1rem;
+}
+
+form * {
+  display: block;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+textarea {
+  max-width: 95%;
+  min-height: 15vh;
+  padding: 0.5rem;
+}
+
+.title {
+  display: inline-block;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-family: "Cantarell", "Noto Sans", sans-serif;
+  font-size: large;
+  font-weight: 700;
+}
+
+#comment-section {
+  list-style-type: none;
+}
+
+#comment-section li {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  border-left: gray solid 2px;
+}
+
+#comment-section li:not(:last-child) article {
+  padding-bottom: 1rem;
+  border-bottom: gray solid 1px;
+}
+
+#new-post-link {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #161616;
+  color: white;
+  text-decoration: none;
+}
+
+#new-post-link:hover {
+  text-decoration: underline;
+}
+
+#copyright-note {
+  font-size: smaller;
+  text-align: center;
+}
+
+.page-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.small-padding {
+  padding: 1rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-rtl {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/*
+Notification styles
+*/
+
+.notification {
+  position: absolute;
+  padding: 1rem;
+  font-size: medium;
+  top: 3rem;
+  right: 3rem;
+  background-color: #c64b74;
+  color: white;
+}
+
+.notification.success {
+  background-color: #22c85c;
+}
+
+.notification.warning {
+  background-color: #c5c509;
+  color: black;
+}
+
+.notification.error {
+  background-color: #c83322;
+}
+
+.loading-indicator {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #e4e3e3;
+  border-left-color: maroon;
+  animation: rotate-360 1s linear infinite;
+}
+
+#posts-section {
+  list-style-type: none;
+  padding: 0;
+}
+
+@media (width >= 768px) {
+  #menu-button {
+    display: none;
+  }
+
+  .post-content {
+    font-size: medium;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #nav-list {
+    display: flex;
+    position: static;
+    justify-content: center;
+    border: none;
+    margin: 0;
+    background-color: white;
+    width: fit-content;
+    list-style-type: none;
+    padding: 0.5rem;
+  }
+
+  #nav-list.hidden {
+    display: flex;
+  }
+
+  #nav-list a {
+    text-decoration: none;
+    font-size: small;
+    font-weight: 500;
+    color: rgb(133, 12, 52);
+  }
+
+  #nav-list li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  #nav-list li:hover {
+    background-color: white;
+    border-bottom: palevioletred solid 2px;
+  }
+
+  .author-info {
+    font-size: small;
+  }
+
+  .view-post-link {
+    font-size: medium;
+  }
+}
+
+@media (width > 1024px) {
+  #register-form,
+  #login-form,
+  #create-post-form {
+    margin: auto;
+    width: 50%;
+  }
+
+  main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1200px) {
+  /* Large screens */
+}

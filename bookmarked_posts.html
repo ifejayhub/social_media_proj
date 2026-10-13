@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logo_black.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="javascript/api.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/bookmarked_posts_init.js"></script>
+    <title>Saved Posts</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <nav id="navbar" class="navbar">
+          <div id="navbar-button-container">
+            <button id="menu-button" onclick="toggleNav(event)">Menu</button>
+            <div>
+              <img src="images/logo_black.png" width="32" height="32" alt="Vision Logo" />
+            </div>
+            <div aria-roledescription="title" class="title">Vision</div>
+          </div>
+
+          <ul id="nav-list" class="hidden">
+            <li><a href="index.html">All Posts</a></li>
+            <li><a href="create_post.html">New Post</a></li>
+            <li><a href="bookmarked_posts.html">Saved Posts</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main-element">
+        <div class="flex-rtl">
+          <a id="new-post-link" href="create_post.html">Create a New Post</a>
+        </div>
+
+        <ul id="posts-section"></ul>
+        <button id="more-posts-button" class="hidden" onclick="loadNextPosts()">See more posts</button>
+        <div id="notification"></div>
+      </main>
+      <footer class="flex-grow">
+        <div class="flex items-center">
+          <div>
+            <img src="images/logo_white.png" width="48" height="48" alt="Vision Logo" />
+          </div>
+          <h2 class="small-padding">Vision</h2>
+        </div>
+        <section>
+          <ul id="footer-nav-list">
+            <li><a href="index.html">All Posts</a></li>
+            <li><a href="create_post.html">New Post</a></li>
+            <li><a href="bookmarked_posts.html">Saved Posts</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </section>
+
+        <span id="copyright-note">All Rights Reserved. Site</span>
+      </footer>
+    </div>
+  </body>
+</html>
