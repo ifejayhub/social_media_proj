@@ -9,7 +9,7 @@ async function loadNextPosts() {
   //show loading indicator
   mainElement.append(loadingIndicator);
 
-  let newPostsData = await getAllPosts({ page: currentPageIndex + 1, limit: 10 }, getAccessToken());
+  let newPostsData = await getBookmarkedPosts({ page: currentPageIndex + 1, limit: 10 }, getAccessToken());
   //Update the current page index and hide the loading indicator
   currentPageIndex++;
   loadingIndicator.remove();
